@@ -1,5 +1,34 @@
 apiVersion: v1
 entries:
+  coredns:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgrade CoreDNS to 1.11.3
+    apiVersion: v2
+    appVersion: 1.11.3
+    created: "2024-08-30T12:54:42.21714718Z"
+    description: CoreDNS is a DNS server that chains plugins and provides Kubernetes
+      DNS Services
+    digest: f8c6c6ce3d5d2a857483b0d199b996f80bff2c1216d89cae7a21b741c7ad0539
+    home: https://coredns.io
+    icon: https://coredns.io/images/CoreDNS_Colour_Horizontal.png
+    keywords:
+    - coredns
+    - dns
+    - kubedns
+    maintainers:
+    - name: mrueg
+    - name: haad
+    - name: hagaibarel
+    - name: shubham-cmyk
+    name: coredns
+    sources:
+    - https://github.com/coredns/coredns
+    type: application
+    urls:
+    - https://github.com/UpCloudLtd/charts/releases/download/coredns-1.32.0/coredns-1.32.0.tgz
+    version: 1.32.0
   konnectivity-agent:
   - apiVersion: v2
     appVersion: 0.0.37
@@ -11,4 +40,4 @@ entries:
     urls:
     - https://github.com/UpCloudLtd/charts/releases/download/konnectivity-agent-0.1.0/konnectivity-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-30T11:02:13.72522539Z"
+generated: "2024-08-30T12:54:42.357275323Z"
