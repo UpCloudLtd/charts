@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  konnectivity-agent:
+  - apiVersion: v2
+    appVersion: 0.0.37
+    created: "2024-08-30T11:02:13.725217765Z"
+    description: A Helm chart for Konnectivity Agent
+    digest: 3f02864b2880fad313fb84f21a38c821d53f98a02f4307ded81d8cdd70d54bdd
+    name: konnectivity-agent
+    type: application
+    urls:
+    - https://github.com/UpCloudLtd/charts/releases/download/konnectivity-agent-0.1.0/konnectivity-agent-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-08-30T11:02:13.72522539Z"
