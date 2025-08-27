@@ -39,5 +39,10 @@ The following table lists the configurable parameters of the Konnectivity Agent 
 | `proxyServer.port` | The port of the proxy server | `8132` |
 | `adminServer.port` | The port of the admin server | `8133` |
 | `healthServer.port` | The port of the health server | `8134` |
+| `options.probeInterval` | The interval by which the agent periodically checks if its connections to the proxy server are ready. | `1s` |
+| `options.syncInterval` | The initial interval by which the agent periodically checks if it has connections to all instances of the proxy server. | `1s` |
+| `options.syncIntervalCap` | The maximum interval for the SyncInterval to back off to when unable to connect to the proxy server | `10s` |
+| `options.syncForever` | If true, the agent continues syncing, in order to support server count changes. | `false` |
+| `options.countServerLeases` | Enables lease counting system to determine the number of proxy servers to connect to. | `false` |
 
 You can specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.

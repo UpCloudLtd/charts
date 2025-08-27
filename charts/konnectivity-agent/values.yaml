@@ -1,6 +1,6 @@
 image:
     repository: registry.k8s.io/kas-network-proxy/proxy-agent
-    tag: v0.0.37
+    tag: v0.31.0
 
 proxyServer:
     # Needs to be set to the UpCloud Load Balancer address
@@ -15,3 +15,15 @@ healthServer:
 
 tolerations:
     - operator: "Exists"
+
+options:
+    # The interval by which the agent periodically checks if its connections to the proxy server are ready.
+    probeInterval: "1s"
+    # The initial interval by which the agent periodically checks if it has connections to all instances of the proxy server.
+    syncInterval: "1s"
+    # The maximum interval for the SyncInterval to back off to when unable to connect to the proxy server
+    syncIntervalCap: "10s"
+    # If true, the agent continues syncing, in order to support server count changes.
+    syncForever: false
+    # Enables lease counting system to determine the number of proxy servers to connect to.
+    countServerLeases: false

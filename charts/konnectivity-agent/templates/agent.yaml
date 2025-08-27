@@ -29,7 +29,12 @@ spec:
                   "--proxy-server-port={{ .Values.proxyServer.port }}",
                   "--admin-server-port={{ .Values.adminServer.port }}",
                   "--health-server-port={{ .Values.healthServer.port }}",
-                  "--service-account-token-path=/var/run/secrets/tokens/konnectivity-agent-token"
+                  "--service-account-token-path=/var/run/secrets/tokens/konnectivity-agent-token",
+                  "--probe-interval={{ .Values.options.probeInterval }}",
+                  "--sync-interval={{ .Values.options.syncInterval }}",
+                  "--sync-interval-cap={{ .Values.options.syncIntervalCap }}",
+                  "--sync-forever={{ .Values.options.syncForever }}",
+                  "--count-server-leases={{ .Values.options.countServerLeases }}"
                   ]
           volumeMounts:
             - mountPath: /var/run/secrets/tokens
