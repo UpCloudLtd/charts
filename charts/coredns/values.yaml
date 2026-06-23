@@ -15,7 +15,7 @@ image:
   # pullSecrets:
   #   - name: myRegistryKeySecretName
 
-replicaCount: 1
+replicaCount: 2
 
 resources:
   limits:
@@ -375,8 +375,7 @@ autoscaler:
   #   image: some-image:latest
   #   imagePullPolicy: Always
 
-  extraEnvs:
-    []
+  extraEnvs: []
     # - name: SOME_ENV_VARIABLE
     #   value: "some-value"
 
