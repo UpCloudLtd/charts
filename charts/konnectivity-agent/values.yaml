@@ -27,3 +27,5 @@ options:
     syncForever: false
     # Enables lease counting system to determine the number of proxy servers to connect to.
     countServerLeases: false
+    # The gRPC client keepalive ping interval. The konnectivity server enforces a minimum of 30s.
+    keepaliveTime: "1m"

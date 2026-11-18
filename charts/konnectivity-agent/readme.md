@@ -44,5 +44,6 @@ The following table lists the configurable parameters of the Konnectivity Agent 
 | `options.syncIntervalCap` | The maximum interval for the SyncInterval to back off to when unable to connect to the proxy server | `10s` |
 | `options.syncForever` | If true, the agent continues syncing, in order to support server count changes. | `false` |
 | `options.countServerLeases` | Enables lease counting system to determine the number of proxy servers to connect to. | `false` |
+| `options.keepaliveTime` | The gRPC client keepalive ping interval. The konnectivity server enforces a minimum of 30s. | `1m` |
 
 You can specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
