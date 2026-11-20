@@ -34,7 +34,8 @@ spec:
                   "--sync-interval={{ .Values.options.syncInterval }}",
                   "--sync-interval-cap={{ .Values.options.syncIntervalCap }}",
                   "--sync-forever={{ .Values.options.syncForever }}",
-                  "--count-server-leases={{ .Values.options.countServerLeases }}"
+                  "--count-server-leases={{ .Values.options.countServerLeases }}",
+                  "--keepalive-time={{ .Values.options.keepaliveTime }}"
                   ]
           volumeMounts:
             - mountPath: /var/run/secrets/tokens
